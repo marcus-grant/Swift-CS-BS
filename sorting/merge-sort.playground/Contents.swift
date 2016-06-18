@@ -88,16 +88,30 @@ var e_to_h = [Int](count: 4, repeatedValue: 0)
 var leftCursor: Int = 0
 var rightCursor: Int = 0
 
+// MARK: change to while, with top condition as exit condition
+// ALSO revise the logic so its cleaner
 for index in 0 ..< a_and_b.count + c_and_d.count {
-  if ( a_and_b[leftCursor] < c_and_d[rightCursor] )
-  {
-    a_to_d[index] = a_and_b[leftCursor]
-    leftCursor += 1
-  } else {
+  if (leftCursor >= a_and_b.count && rightCursor >= c_and_d.count ) {
+    break
+  } else if leftCursor >= a_and_b.count{
     a_to_d[index] = c_and_d[rightCursor]
     rightCursor += 1
+  } else if rightCursor >= c_and_d.count {
+    a_to_d[index] = a_and_b[leftCursor]
+    leftCursor += 1
+  } else if (a_and_b[leftCursor] > c_and_d[rightCursor]) {
+    a_to_d[index] = c_and_d[rightCursor]
+    rightCursor += 1
+  } else {
+    a_to_d[index] = a_and_b[leftCursor]
+    leftCursor += 1
   }
 }
+
+// MARK: repeat for e_to_h
+
+// now sub array a_to_d is sorted and merged with a_and_b and c_and_d
+print ("Sub-array \"a_to_d\" is now sorted, here is it's contents: \(a_to_d)")
 
 
 
