@@ -108,10 +108,40 @@ for index in 0 ..< a_and_b.count + c_and_d.count {
   }
 }
 
-// MARK: repeat for e_to_h
-
 // now sub array a_to_d is sorted and merged with a_and_b and c_and_d
 print ("Sub-array \"a_to_d\" is now sorted, here is it's contents: \(a_to_d)")
+
+// MARK: repeat for e_to_h
+leftCursor = 0
+rightCursor = 0
+for index in 0 ..< e_and_f.count + g_and_h.count {
+  if (leftCursor >= e_and_f.count && rightCursor >= g_and_h.count) {
+    break
+  } else if leftCursor >= e_and_f.count {
+    e_to_h[index] = e_and_f[rightCursor]
+    rightCursor += 1
+  } else if rightCursor >= g_and_h.count {
+    e_to_h[index] = g_and_h[leftCursor]
+    leftCursor += 1
+  } else if (e_and_f[leftCursor] >= g_and_h[rightCursor]) {
+    e_to_h[index] = g_and_h[rightCursor]
+    rightCursor += 1
+  } else {
+    e_to_h[index] = e_and_f[leftCursor]
+    leftCursor += 1
+  }
+}
+
+print ("Sub-array \"e_to_h\" is now sorted, here is it's contents: \(e_to_h)")
+
+var leftIndex = 0
+var rightIndex = 0
+var mergedIndex = 0
+
+// However implementing this explicitly is no fun, and isn't terribly efficient
+// Merge-sort is a classic example of where to use recursion effectively, since you will need to recurively merge arrays 
+
+
 
 
 
