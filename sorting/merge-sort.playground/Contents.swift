@@ -6,28 +6,7 @@ import Cocoa
 var orderedArr: [Int] = [1,2,3,4,5,6,7,8,9]
 
 // shuffle the array with array extensions
-extension CollectionType {
-  /// Return a copy of `self` with its elements shuffled
-  func shuffle() -> [Generator.Element] {
-    var list = Array(self)
-    list.shuffleInPlace()
-    return list
-  }
-}
-
-extension MutableCollectionType where Index == Int {
-  /// Shuffle the elements of `self` in-place. Using Fisher-Yates method
-  mutating func shuffleInPlace() {
-    // empty and single-element collections don't shuffle
-    if count < 2 { return }
-
-    for i in 0..<count - 1 {
-      let j = Int(arc4random_uniform(UInt32(count - i))) + i
-      guard i != j else { continue }
-      swap(&self[i], &self[j])
-    }
-  }
-}
+ 
 
 // array before being sorted
 print (orderedArr)
@@ -139,7 +118,82 @@ var rightIndex = 0
 var mergedIndex = 0
 
 // However implementing this explicitly is no fun, and isn't terribly efficient
-// Merge-sort is a classic example of where to use recursion effectively, since you will need to recurively merge arrays 
+// But I think it's a good way to demonstrate how algorithms work for the sake of learning
+// Here is how you implement it in the classic manner, which is through recursion. 
+// This is in fact one of the truly classic examples of recurions because the nature of divide-and-conquer algorithms
+// The steps taken will be...
+// 1. Find middle point of array, or list, or whatever using middleIndex
+// 2. Call mergeSort(inputArray, leftIndex, middleIndex) to sort first half of inputArray
+// 3. Call mergeSort(inputArray, middleIndex+1, rightIndex) to sort second half
+// 4. Merge the two halves using merge(inputArray, leftIndex, middleIndex, rightIndex)
+
+// first we'll define merge as a utility function for the mergeSort function
+// This is also a great place to make use of Swift Generics, as any object that's comparable is able to be sorted
+// We do this by invoking the "comparable" protocol, which means that any object passed to the function must define functionality for the <, > operators. Which we need because sorts require the ability to compare values. Say we had an array of Persons and we wanted to compare them by their age attribute/property, we would then have to define those operators within the Person class
+// Then when we define the function taking the generic input, we use <T: Comparable>
+// You may also be wondering about the "inout" keyword, as I've not covered this before. Basically, the default func parameters are in fact constants passed by value. Here we will need to alter the inputArray, and as such it is defined with the inout keyword to tell the compiler we need to alter the parameter.
+func mergeSort<T: Comparable>(inout inputArray: [T]) {
+
+  // The exit condition for when recursive calls of self split sub-arrays to 1
+  if inputArray.count <= 1 {
+    return
+  }
+
+  var middleIndex = inputArray.count / 2
+  var leftArray = [T]()
+  var rightArray = [T]()
+
+  for leftIndex in 0..<middleIndex {
+    leftArray.append(inputArray[leftIndex])
+  }
+
+  for rightIndex in middleIndex..<inputArray.count {
+    rightArray.append(inputArray[rightIndex])
+  }
+
+  mergeSort(&leftArray)
+  mergeSort(&rightArray)
+
+  print("Sub-arrays of \(leftArray) & \(rightArray)")
+  inputArray = merge(&leftArray, rightArray: &rightArray)
+
+}
+
+func merge<T: Comparable>(inout leftArray: [T], inout rightArray:[T]) -> [T]{
+
+  var sortedArray = [T]()
+
+  // Merge by constantly checking current index of sub-arrays
+  while (!leftArray.isEmpty && !rightArray.isEmpty)
+  {
+    if leftArray[0] <= rightArray[0] {
+      sortedArray.append(leftArray[0])
+      leftArray.removeAtIndex(0)
+    } else {
+      sortedArray.append(rightArray[0])
+      rightArray.removeAtIndex(0)
+    }
+
+    while !leftArray.isEmpty {
+      sortedArray.append(leftArray[0])
+      leftArray.removeAtIndex(0)
+    }
+
+    while !rightArray.isEmpty {
+      sortedArray.append(rightArray[0])
+      rightArray.removeAtIndex(0)
+    }
+
+  }
+    return sortedArray
+}
+
+var test = [1, 1, 2, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9]
+test.shuffle()
+print("Shuffled array: \(test)")
+mergeSort(&test)
+
+
 
 
 
