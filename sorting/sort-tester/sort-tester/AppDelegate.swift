@@ -22,6 +22,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     print("\(testArray)")
     sc.quickSort(&testArray)
     print("Completed quick-sort \(testArray)")
+    print("Here's merge sort")
 
     return true
   }
