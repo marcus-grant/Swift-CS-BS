@@ -26,11 +26,12 @@ func quickSort<T: Comparable>(inout inputArray: [T],
     while inputArray[leftIterator] < pivotValue {
       if leftIterator >= pivotIndex { break }
       leftIterator += 1
+      //print("Left Iterator: \(leftIterator)")
     }
-    print("leftIterator stopped at: \(leftIterator)")
     while inputArray[rightIterator] >= pivotValue {
       if leftIterator >= rightIterator { break }
       rightIterator -= 1
+      //print("Right iterator: \(rightIterator)")
     }
     if leftIterator != rightIterator {
       swap(&inputArray[leftIterator], &inputArray[rightIterator])
