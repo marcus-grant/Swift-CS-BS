@@ -19,10 +19,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     let sc = SortController()
     var testArray: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
     sc.shuffleInPlace(&testArray)
-    print("\(testArray)")
-    sc.quickSort(&testArray)
-    print("Completed quick-sort \(testArray)")
-    print("Here's merge sort")
+    testArray = sc.createTestArrayWith(10000, minValue: 0, maxValue: 99)
+    var bubbleSortArray = testArray
+    var quickSortArray = testArray
+    print("Shuffled Array:   \(bubbleSortArray)")
+    //print ("                 " + sc.arrayStringWithIndex(testArray))
+//    print("Beginning Bubble Sort!")
+//    let bubbleStartTime = NSDate()
+//    sc.bubbleSort(&bubbleSortArray)
+//    let bubbleSortTime = -1 * bubbleStartTime.timeIntervalSinceNow
+//    print("Bubble Sorted: Array: \(bubbleSortArray)")
+//    print("Bubble Sort took \(bubbleSortTime*1000)ms")
+//    print("Beginning QuickSort!")
+    let quickStartTime = NSDate()
+    sc.quickSort(&quickSortArray)
+    let quickSortTime = -1 * quickStartTime.timeIntervalSinceNow
+    print("Quick Sorted Array \(quickSortArray)")
+    print("Quick sort took \(quickSortTime*1000)ms")
+    //print("Here's merge sort")
 
     return true
   }
