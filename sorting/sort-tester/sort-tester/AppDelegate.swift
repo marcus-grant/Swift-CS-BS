@@ -17,12 +17,54 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
 
     let sc = SortController()
-    var testArray: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
-    sc.shuffleInPlace(&testArray)
-    testArray = sc.createTestArrayWith(10000, minValue: 0, maxValue: 99)
+    //var testArray: [Int] = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20]
+    //var testArray: [Int] = [1,2,3,4,5,6,7,8,9]
+    //sc.shuffleInPlace(&testArray)
+    var testArray = sc.createTestArrayWith(10000, minValue: 0, maxValue: 99)
     var bubbleSortArray = testArray
     var quickSortArray = testArray
-    print("Shuffled Array:   \(bubbleSortArray)")
+    var combSortArray = testArray
+    //print("Shuffled Array:   \(testArray)")
+//    print("Performing Bubble-Sort!")
+//    let bubbleStats = sc.bubbleSortWithStats(&bubbleSortArray)
+    var outputString = "BubbleSort completed with "
+//    outputString += "\(bubbleStats.compares) comparisons, "
+//    outputString += "\(bubbleStats.arrayAccesses) accesses, "
+//    outputString += "and finished in \(bubbleStats.time)ms"
+//    print (outputString)
+//    print("Performing Comb-sort!")
+//    let combStats = sc.combSortWithStats(&combSortArray, gapScaleFactor: 1.3)
+//    outputString = "CombSort completed with "
+//    outputString += "\(combStats.compares) comparisons, "
+//    outputString += "\(combStats.arrayAccesses) accesses, "
+//    outputString += "and finished in \(combStats.time)ms"
+//    print (outputString)
+    let trials = 10
+//    print("Performing \(trials) trials of Comb-Sort...")
+//    let combSortStats = sc.testCombSortWithInts(trials, size: 10000, gapScale: 1.3, minValue: 0, maxValue: 1000)
+//    print("All the Comb-Sort trials ended with these stats:")
+//    print("worst time:   \(combSortStats.maxTime)")
+//    print("average time: \(combSortStats.avgTime)")
+//    print("best time:    \(combSortStats.minTime)")
+
+    print("Performing gap sweep of comb-sort...")
+    let size = 10000
+    let minGap = 1.1
+    let maxGap = 8.0
+    let sweepRate = 0.1
+    let combSweepResults = sc.testCombSortWithGapSweep(trials, size: size,
+                                                       minGap: minGap,
+                                                       maxGap: maxGap,
+                                                       sweepRate: sweepRate)
+    print ("Sweep completed, here are the results:")
+    var currentGap = minGap
+    for avgTime in combSweepResults {
+      print("gapScale: \(currentGap), sort time: \(avgTime)")
+      currentGap += sweepRate
+    }
+
+
+
     //print ("                 " + sc.arrayStringWithIndex(testArray))
 //    print("Beginning Bubble Sort!")
 //    let bubbleStartTime = NSDate()
@@ -31,11 +73,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 //    print("Bubble Sorted: Array: \(bubbleSortArray)")
 //    print("Bubble Sort took \(bubbleSortTime*1000)ms")
 //    print("Beginning QuickSort!")
-    let quickStartTime = NSDate()
-    sc.quickSort(&quickSortArray)
-    let quickSortTime = -1 * quickStartTime.timeIntervalSinceNow
-    print("Quick Sorted Array \(quickSortArray)")
-    print("Quick sort took \(quickSortTime*1000)ms")
+//    let quickStartTime = NSDate()
+//    sc.quickSort(&quickSortArray)
+//    let quickSortTime = -1 * quickStartTime.timeIntervalSinceNow
+//    print("Quick Sorted Array \(quickSortArray)")
+//    print("Quick sort took \(quickSortTime*1000)ms")
     //print("Here's merge sort")
 
     return true
