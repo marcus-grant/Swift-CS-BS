@@ -59,7 +59,10 @@ public class LinkedListNode<T> {
 var list = LinkedList<String>()
 list.isEmpty              // true
 list.first                // nil
-list.append("Hello!")
+list.append("Hello")
 list.isEmpty              // false
-list.first!.value         // "Hello!"
-list.last!.value          // "Hello!" - first & last are the same
+list.first!.value         // "Hello"
+list.last!.value          // "Hello" - first & last are the same
+
+// Add another node to see if first & last works
+list.append("World!")

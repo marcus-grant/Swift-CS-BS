@@ -353,6 +353,78 @@ class SortController: NSObject {
     return (comparisons, arrayAccesses)
   }
 
+  // MARK: Merge
+  //////////////////////////////////////////////////////////////////////////////////////
+
+  func mergeSort<T: Comparable>(inout inputArray: [T]) {
+
+    // The exit condition for when recursive calls of self split sub-arrays to 1
+    if inputArray.count <= 1 {
+      return
+    }
+
+    // Split the current recursion's array into a left and right array
+    let middleIndex = inputArray.count / 2
+    var leftArray = [T]()
+    var rightArray = [T]()
+
+    for leftIndex in 0..<middleIndex {
+      leftArray.append(inputArray[leftIndex])
+    }
+
+    for rightIndex in middleIndex..<inputArray.count {
+      rightArray.append(inputArray[rightIndex])
+    }
+
+    // Recursively calling mergeSort() with the left and right arrays will keep splitting
+    // the array until there's only sub-arrays with 2 or 3 elements
+    mergeSort(&leftArray)
+    mergeSort(&rightArray)
+
+    // Once all the arrays are split as much as possible the recursion reverses by calling
+    // merge() to merge the arrays in order, until the recursion ends only 2 arrays merge
+    inputArray = merge(&leftArray, rightArray: &rightArray)
+
+  }
+
+  func merge<T: Comparable>(inout leftArray: [T], inout rightArray:[T]) -> [T]{
+
+    // Initialize the array that will be merged and sorted
+    var sortedArray = [T]()
+
+    // Merge by constantly checking current index of sub-arrays
+    while (!leftArray.isEmpty && !rightArray.isEmpty)
+    {
+      // Take first element of left and right arrays and compare for smallest value
+      // The first element of each array will be the smallest of that array, so add that
+      // element to the sortedArray, and remove it from the array with the smaller
+      if leftArray[0] <= rightArray[0] {
+        sortedArray.append(leftArray[0])
+        leftArray.removeAtIndex(0)
+      } else {
+        sortedArray.append(rightArray[0])
+        rightArray.removeAtIndex(0)
+      }
+
+      // On many occasions either the left or right array will be emptied before the other
+      // If that's the case simply append the remaining array to the sorted array
+      while !leftArray.isEmpty {
+        sortedArray.append(leftArray[0])
+        leftArray.removeAtIndex(0)
+      }
+
+      while !rightArray.isEmpty {
+        sortedArray.append(rightArray[0])
+        rightArray.removeAtIndex(0)
+      }
+      
+    }
+    return sortedArray
+  }
+
+  
+
+
 
 
   // MARK: Helper Functions

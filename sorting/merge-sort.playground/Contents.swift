@@ -6,18 +6,27 @@ import Cocoa
 var orderedArr: [Int] = [1,2,3,4,5,6,7,8,9]
 
 // shuffle the array with array extensions
- 
+func shuffleInPlace<T>(inout inputArray: [T]) {
+  let size = inputArray.count
+  if size < 2 { return }
+
+  for i in 0 ..< size - 1 {
+    let j = Int(arc4random_uniform(UInt32(size - i))) + i
+    guard i != j else { continue }
+    swap(&inputArray[i], &inputArray[j])
+  }
+}
 
 // array before being sorted
 print (orderedArr)
-let arr = orderedArr.shuffle()
+let arr = [Int(shuffleInPlace(&orderedArr))]
 
 // lets merge-sort by hand so the method is more clear
 // first split the array till each element has it's own sub-set of size 1
 // any set of size 1 is always sorted
 
-let a = arr[0]; let b = arr[1]; let c = arr[2]; let d = arr[3]; let e = arr[4]
-let f = arr[5]; let g = arr[6]; let h = arr[7]; let i = arr[8]
+let a = 5; let b = 1; let c = 6; let d = 7; let e = 4
+let f = 2; let g = 9; let h = 3; let i = 8
 
 // now continue to merge these sub-arrays into larger ones, from left to right, in order
 // first create temporary sub array
@@ -139,7 +148,7 @@ func mergeSort<T: Comparable>(inout inputArray: [T]) {
     return
   }
 
-  var middleIndex = inputArray.count / 2
+  let middleIndex = inputArray.count / 2
   var leftArray = [T]()
   var rightArray = [T]()
 
@@ -189,7 +198,7 @@ func merge<T: Comparable>(inout leftArray: [T], inout rightArray:[T]) -> [T]{
 }
 
 var test = [1, 1, 2, 3, 4, 4, 4, 5, 6, 6, 7, 8, 8, 9]
-test.shuffle()
+shuffleInPlace(&test)
 print("Shuffled array: \(test)")
 mergeSort(&test)
 

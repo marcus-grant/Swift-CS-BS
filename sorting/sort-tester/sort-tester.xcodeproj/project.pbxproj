@@ -15,6 +15,7 @@
 		2C98857A1D1DB9E000D2E3B2 /* sort_testerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9885791D1DB9E000D2E3B2 /* sort_testerTests.swift */; };
 		2C9885851D1DB9E000D2E3B2 /* sort_testerUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9885841D1DB9E000D2E3B2 /* sort_testerUITests.swift */; };
 		2C9885931D1DB9F800D2E3B2 /* SortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9885921D1DB9F800D2E3B2 /* SortController.swift */; };
+		2C9885951D1F332800D2E3B2 /* DoublyLinkedList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C9885941D1F332800D2E3B2 /* DoublyLinkedList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2C9885841D1DB9E000D2E3B2 /* sort_testerUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = sort_testerUITests.swift; sourceTree = "<group>"; };
 		2C9885861D1DB9E000D2E3B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9885921D1DB9F800D2E3B2 /* SortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortController.swift; sourceTree = "<group>"; };
+		2C9885941D1F332800D2E3B2 /* DoublyLinkedList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DoublyLinkedList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				2C98856D1D1DB9E000D2E3B2 /* LaunchScreen.storyboard */,
 				2C9885701D1DB9E000D2E3B2 /* Info.plist */,
 				2C9885921D1DB9F800D2E3B2 /* SortController.swift */,
+				2C9885941D1F332800D2E3B2 /* DoublyLinkedList.swift */,
 			);
 			path = "sort-tester";
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				2C9885931D1DB9F800D2E3B2 /* SortController.swift in Sources */,
 				2C9885671D1DB9E000D2E3B2 /* ViewController.swift in Sources */,
 				2C9885651D1DB9E000D2E3B2 /* AppDelegate.swift in Sources */,
+				2C9885951D1F332800D2E3B2 /* DoublyLinkedList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
