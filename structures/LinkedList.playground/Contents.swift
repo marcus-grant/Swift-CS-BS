@@ -28,12 +28,7 @@ public class LinkedList<T> {
   }
 
   public var last: Node? {
-    if var node = head {
-      while case let next? = node.next {
-        node = next
-      }
-      return node
-    } else { return nil }
+    return tail
   }
 
   // Adds an incrementer for count so count up
@@ -111,45 +106,61 @@ public class LinkedList<T> {
     return removedNode!.value
   }
 
+  public func clear() {
+    head!.next = nil
+    head = nil
+    tail!.previous = nil
+    tail = nil
+    count = 0
+  }
+
   public func insert(value: T, atIndex index: Int) {
-    assert(index >= 0 || index <= count)
-    if index == count { self.append(value); return }
-    let newNode = Node(value)
-    if index == 0 {
-      newNode.next = head
-      head.previous = newNode
-      head = newNode
-    } else {
+    assert((index >= 0) && (index <= count))
 
-    }
-
-
-
-
-    let newNode = Node(value: value)
-    let (newNextNode, newPrevNode) = currentNodeAndPrevious(index)
-    print ("newNextNode value: \(newNextNode!.value)")
-    print ("newPrevNoce value: \(newPrevNode!.value)")
-    count += 1
-    if index == 0 {
-      print("Inserting new head node")
-      newNode.next = head // newNode.next point to old head
-      newNode.previous = nil
-      head!.previous = newNode // old head node's previous points to new node at new head
-      head = newNode // set new head node to newNode
+    // if adding next to the end of list, treat as an append
+    if index == count {
+      append(value);
       return
     }
-      newNode.next = newNextNode
-      newNode.previous = newPrevNode
-      newNextNode!.previous = newNode
-      newPrevNode!.next = newNode
+
+    count += 1
+    let insertedNode = Node(value: value)
+    if index == 0 {
+      insertedNode.next = head
+      insertedNode.previous = nil
+      head!.previous = insertedNode
+      head = insertedNode
+    } else {
+      let newNextNode = nodeAtIndex(index)
+      insertedNode.previous = newNextNode!.previous
+      insertedNode.next = newNextNode
+      insertedNode.previous!.next = insertedNode
+      newNextNode!.next = insertedNode
     }
   }
 
+  public func map<U>(transform: T -> U) -> LinkedList<U> {
+    let result = LinkedList<U>()
+    var node = head
+    while node != nil {
+      result.append(transform(node!.value))
+      node = node!.next
+    }
+    return result
+  }
 
-
+  public func filter(predicate: T -> Bool) -> LinkedList<T> {
+    let result = LinkedList<T>()
+    var node = head
+    while node != nil {
+      if predicate(node!.value) {
+        result.append(node!.value)
+      }
+      node = node!.next
+    }
+    return result
+  }
 }
-
 
 public class LinkedListNode<T> {
   var value: T
@@ -201,18 +212,34 @@ list.count                // 3
 list.remove(2)            // "B"
 list.count                // 2
 //list.remove(2)          // ERROR
+list.clear()
 
 // Test that insert(value,index) works
-list.insert(" ", atIndex: 1)
-list.count                // 3
-list[2]
-list.insert("!", atIndex: 2)
-list.count                // 4
-list.first?.value         // "Hello"
-list[1]                   // " "
-list[2]                   //
-list[3]
+list.append("B")
+list.append("D")
+list[0]                   // B
+list[1]                   // D
+list.insert("C", atIndex: 1)
+list.insert("A", atIndex: 0)
+list.insert("E", atIndex: 4)
+list[0]                   // A
+list[1]                   // B
+list[2]                   // C
+list[3]                   // D
+list[4]                   // E
 
-
+// Test that map and filter works
+list.clear()
+list.append("Hello")
+list.append("Swift")
+list.append("Community!")
+let charCountList = list.map { charCount in charCount.characters.count }
+charCountList[0]          // 5
+charCountList[1]          // 5
+charCountList[2]          // 10
+let filteredList = list.filter { chars in chars.characters.count > 5 }
+filteredList[0]           // Community! because this is the only one with > 5 characters
+//filteredList[1]         // Crashes becasue empty
+//filteredList[0]           // Same as above
 
 
