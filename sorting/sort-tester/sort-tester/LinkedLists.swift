@@ -8,7 +8,12 @@
 //
 
 // TODO: Add tail property with included functionality to SimpleLinkedList
+// TODO: Implement merge sort for simple and linked list
 // TODO: Conform classes to some collection type or make them subclasses
+// TODO: Should all collection types be structs instead?
+// TODO: Change asserts into proper fatalErrors, errors, or exceptions
+// TODO: Try using extensions with any some of these: SequenceType, Indexable, Collection
+// TODO: Change Nodes to struct? Is it more efficient? Does it do everything you need?
 // TODO: Add thread locking
 
 
@@ -154,6 +159,13 @@ public class SimpleLinkedList<T> {
     }
     return result
   }
+
+//  public func sort(ascending: Bool) {
+//    if
+//    let midNode = nodeAtIndex(count >> 1)
+//
+//  }
+
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
@@ -185,7 +197,9 @@ public class Stack<T> {
 
   public func pop() -> T {
     count -= 1
-    return head!.value
+    let returnValue = head!.value
+    head = head!.next
+    return returnValue
   }
 
   public func clear() {
@@ -194,11 +208,50 @@ public class Stack<T> {
 }
 
 /////////////////////////////////////////////////////////////////////////////////////////
-// MARK: - DoublyLinkedList/LinkedList class
+// MARK: - Queue
 /////////////////////////////////////////////////////////////////////////////////////////
 public class Queue<T> {
   public typealias Node = SingleLinkNode<T>
-  
+  private var head: Node?
+  private var tail: Node?
+
+  private(set) var count = 0
+
+  public var isEmpty: Bool {
+    return head == nil
+  }
+
+  public var front: T {
+    return head!.value
+  }
+
+  func add(value: T){
+    count += 1
+    let newNode = Node(value: value)
+    if isEmpty {
+      head = newNode
+      tail = newNode
+      newNode.next = nil
+    } else {
+      tail!.next = newNode
+      newNode.next = nil
+      tail = newNode
+    }
+  }
+
+  public func remove() -> T {
+    assert(!isEmpty)
+    count -= 1
+    let returnValue = head!.value
+    head = head!.next
+    return returnValue
+  }
+
+  public func clear() {
+    head = nil
+    tail = nil
+  }
+
 
 }
 
