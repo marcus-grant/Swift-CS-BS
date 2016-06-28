@@ -10,6 +10,8 @@ import Foundation
 
 class SortController: NSObject {
 
+  private var randomState = UInt32(NSDate().timeIntervalSinceNow)
+
   // MARK: BubbleSort
   ///////////////////////////////////////////////////////////////////////////////////////
 
@@ -353,7 +355,88 @@ class SortController: NSObject {
     return (comparisons, arrayAccesses)
   }
 
-  // MARK: Merge
+  ////////////////////////////////////////////////////////////////////////////////////////
+  // MARK: - QuickSort Helper Methods
+  ////////////////////////////////////////////////////////////////////////////////////////
+
+  func middleIndex<T>(inout collection: )
+  // One way to improve quick-sort performance is called the "Median Of 3" method.
+  // Basically you compare the values of the front, back, and middle of the array
+  // for the median value. This reduces the odds of a particularly high, or low
+  // pivot value, which slows down the sort since it creates smaller divisions
+  // This is a really fast way to improve pivot collection
+  func medianOf3Pivot<T: Comparable>(inout collection: [T]) -> Int {
+    var indeces = [0, collection.count >> 1, collection.count - 1]
+    // sort this array of the three indeces by their associated collection value
+    if indeces[0] > indeces[2] {
+      swap(&indeces[0], &indeces[2])
+    }
+    if indeces[0] > indeces[1] {
+      swap(&indeces[0], &indeces[1])
+    }
+    if indeces[1] > indeces[2] {
+      swap(&indeces[1], &indeces[2])
+    }
+    // Now the indeces are sorted by their associated value in the collection
+    // The median of three index is now inside indeces[1]
+    return indeces[1]
+  }
+
+
+
+  // This bit mask converts the LFSR random state into a range smaller than the
+  // collection size. This could make the range of random pivots as small as
+  // half the size of the collection.
+  // Not a big deal considering this will still overcome a lot of pivot
+  // selection problems without a lot of computational time complexity
+  // FOR EXAMPLE: if our collection is 63 elements, 6 bits are needed to
+  // represent the number, but because 6 bits allows for 1 element larger than
+  // potential size of collection, the function could return an out range pivot.
+  // So without taking too much computation time, a good comprimise is to only
+  // use the lower 5 bits of that 63 range, where only the lower half gets used.
+  // This randomized pivot selection should only take 22 single cycle instructions
+  func randomPivot(collectionSize: Int) -> Int {
+    updateXORShiftState()
+    return Int(roundedDownBitMask(UInt32(collectionSize)) & randomState)
+  }
+
+  // Linear Feedback Shift Registers are a fast way to come up with unpredictable,
+  // and relatively uniform random numbers MUCH faster than arc4random_uniform
+  private func updateLFSRState(){
+    let feedbackBit = (randomState ^ (randomState >> 2) ^ (randomState >> 3) ^
+      (randomState >> 5)) & 1
+    randomState = (randomState >> 1) | (feedbackBit << 15)
+  }
+
+  // Using the current time in seconds since epoch time as the starting random
+  // state, a XOR shift is used to come up with a fast and uniformily random
+  // next state, which is represented as an unsigned 32 bit number.
+  // EVEN FASTER than LFSR but sacrifices unpredictability, which isn't important
+  // unless cryptographics applications are needed
+  private func updateXORShiftState() {
+    randomState ^= randomState >> 12
+    randomState ^= randomState << 25
+    randomState ^= randomState >> 27
+  }
+
+  // Returns a bitmask of the bit positions lower than the number given.
+  // Gets used as a faster version of the modulo, but with even worse modulo bias
+  // The bit manipulation used is to find the nearest power of 2 number to the
+  // given number, but normally at the end you'd add 1 to x, without it we get the
+  // correct bit mask to reduce a numbers range with worst case precision of n/2
+  private func roundedDownBitMask (number: UInt32) -> UInt32 {
+    var x = number
+    x -= 1
+    x |= x >> 1
+    x |= x >> 2
+    x |= x >> 4
+    x |= x >> 8
+    x |= x >> 16
+    return x
+  }
+
+  //////////////////////////////////////////////////////////////////////////////////////
+  // MARK: - Merge
   //////////////////////////////////////////////////////////////////////////////////////
 
   func mergeSort<T: Comparable>(inout inputArray: [T]) {
@@ -422,7 +505,6 @@ class SortController: NSObject {
     return sortedArray
   }
 
-  
 
 
 
@@ -518,4 +600,6 @@ class SortController: NSObject {
 
 
 }
+
+
 
