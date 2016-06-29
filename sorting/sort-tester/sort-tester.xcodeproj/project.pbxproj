@@ -51,6 +51,7 @@
 		2C9885861D1DB9E000D2E3B2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		2C9885921D1DB9F800D2E3B2 /* SortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SortController.swift; sourceTree = "<group>"; };
 		2C9885941D1F332800D2E3B2 /* LinkedLists.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LinkedLists.swift; sourceTree = "<group>"; };
+		2CA6BF9B1D22431E005A1A81 /* statsTest.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = statsTest.playground; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -108,6 +109,7 @@
 				2C98856D1D1DB9E000D2E3B2 /* LaunchScreen.storyboard */,
 				2C9885701D1DB9E000D2E3B2 /* Info.plist */,
 				2C9885921D1DB9F800D2E3B2 /* SortController.swift */,
+				2CA6BF9B1D22431E005A1A81 /* statsTest.playground */,
 				2C9885941D1F332800D2E3B2 /* LinkedLists.swift */,
 			);
 			path = "sort-tester";

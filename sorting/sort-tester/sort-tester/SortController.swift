@@ -8,6 +8,16 @@
 
 import Foundation
 
+//TODO: Fix array access counter, it's not accurate for most funcs that use them
+//TODO: Fix merge-sort
+//TODO: Add merge-sort with linked lists
+//TODO: Make an evaluation func that takes a closure for which sort to get stats for
+//TODO: Add closure support (and enum?) to specify the variant and type of sort
+//TODO: Add Selection and Insertion sort
+//TODO: Add heapsort
+//TODO: Add timsort
+//TODO: Add
+
 class SortController: NSObject {
 
   private var randomState = UInt32(NSDate().timeIntervalSinceNow)
@@ -359,22 +369,28 @@ class SortController: NSObject {
   // MARK: - QuickSort Helper Methods
   ////////////////////////////////////////////////////////////////////////////////////////
 
-  func middleIndex<T>(inout collection: )
+
+  // The cheapest (time wise) improvement to quick-sort pivot selection is to just pick
+  // the middle index
+  func middleIndex<T>(inout array: [T]) -> Int {
+    return array.count >> 1
+  }
   // One way to improve quick-sort performance is called the "Median Of 3" method.
   // Basically you compare the values of the front, back, and middle of the array
   // for the median value. This reduces the odds of a particularly high, or low
   // pivot value, which slows down the sort since it creates smaller divisions
-  // This is a really fast way to improve pivot collection
-  func medianOf3Pivot<T: Comparable>(inout collection: [T]) -> Int {
-    var indeces = [0, collection.count >> 1, collection.count - 1]
+  // This is a really cheap way to improve pivot collection.
+  // In smaller arrays, it might be too much overhead to be of value
+  func medianOf3Pivot<T: Comparable>(array: [T]) -> Int {
+    var indeces = [0, array.count >> 1, array.count - 1]
     // sort this array of the three indeces by their associated collection value
-    if indeces[0] > indeces[2] {
+    if array[indeces[0]] > array[indeces[2]] {
       swap(&indeces[0], &indeces[2])
     }
-    if indeces[0] > indeces[1] {
+    if array[indeces[0]] > array[indeces[1]] {
       swap(&indeces[0], &indeces[1])
     }
-    if indeces[1] > indeces[2] {
+    if array[indeces[1]] > array[indeces[2]] {
       swap(&indeces[1], &indeces[2])
     }
     // Now the indeces are sorted by their associated value in the collection
@@ -382,22 +398,20 @@ class SortController: NSObject {
     return indeces[1]
   }
 
-
-
-  // This bit mask converts the LFSR random state into a range smaller than the
-  // collection size. This could make the range of random pivots as small as
-  // half the size of the collection.
-  // Not a big deal considering this will still overcome a lot of pivot
-  // selection problems without a lot of computational time complexity
-  // FOR EXAMPLE: if our collection is 63 elements, 6 bits are needed to
-  // represent the number, but because 6 bits allows for 1 element larger than
-  // potential size of collection, the function could return an out range pivot.
-  // So without taking too much computation time, a good comprimise is to only
-  // use the lower 5 bits of that 63 range, where only the lower half gets used.
-  // This randomized pivot selection should only take 22 single cycle instructions
-  func randomPivot(collectionSize: Int) -> Int {
+  // Another pivot selection strategy to improve sort times is to pick a random pivot
+  // However arc4random, though a decent random number generator, might be too slow
+  // to offer any noticable sort time improvements, it might even make it worse
+  func arc4randomPivot<T>(inout array: [T]) -> Int {
+    return Int(arc4random_uniform(UInt32(array.count)))
+  }
+  // This returns a randomized pivot using a faster random number function than arc4.
+  // XOR shifts are less predictable than arc4, but predictability isn't important in
+  // picking "random" pivots; the time it takes to actually come up with a random pivot
+  // will have a significantly largre impact on overall sort performance.
+  // Not counting function calls of helpers, randomPivot() should only take 20 cycles
+  func randomPivot(arraySize: Int) -> Int {
     updateXORShiftState()
-    return Int(roundedDownBitMask(UInt32(collectionSize)) & randomState)
+    return Int(roundedDownBitMask(UInt32(arraySize)) & randomState)
   }
 
   // Linear Feedback Shift Registers are a fast way to come up with unpredictable,
@@ -409,10 +423,10 @@ class SortController: NSObject {
   }
 
   // Using the current time in seconds since epoch time as the starting random
-  // state, a XOR shift is used to come up with a fast and uniformily random
+  // state, a XOR shift is used to come up with a fast and fairly uniform random
   // next state, which is represented as an unsigned 32 bit number.
   // EVEN FASTER than LFSR but sacrifices unpredictability, which isn't important
-  // unless cryptographics applications are needed
+  // in a sorting method
   private func updateXORShiftState() {
     randomState ^= randomState >> 12
     randomState ^= randomState << 25
@@ -506,9 +520,6 @@ class SortController: NSObject {
   }
 
 
-
-
-
   // MARK: Helper Functions
 
   func shuffleInPlace<T>(inout inputArray: [T]) {
@@ -524,6 +535,19 @@ class SortController: NSObject {
 
 
   // MARK: Testing
+
+  func isSorted<T: Comparable>(array: [T], ascending: Bool) -> Bool {
+    if ascending {
+      for index in 1 ..< array.count {
+        if array[index - 1] > array[index] { return false }
+      }
+    } else {
+      for index in 1 ..< array.count {
+        if array[index - 1] < array[index] { return false }
+      }
+    }
+    return true
+  }
 
   func createTestArrayWith(numElements: UInt, minValue: Int, maxValue: Int) -> [Int] {
     var currentArrayIndex: UInt = 0
@@ -597,9 +621,33 @@ class SortController: NSObject {
       }
       return resultsArray
   }
-
-
+  //MARK: - Stats funcs
+  func getStats(data: [Double])
+    -> (min: Double, max: Double, mean: Double, stdDev: Double) {
+      let samples = Double(data.count)
+      let min = data.minElement()!
+      let max = data.maxElement()!
+      let mean = data.reduce(0){$0 + $1} / samples // sum data with reduce, then divide
+      // order of operations for stdDev:
+      // 1. For each element of data; take difference from mean and square result (map())
+      // 2. Sum all results from previous ( reduce() )
+      // 3. Divide by array size of data (samples)
+      // 4. Finally take square root of it all ( sqrt() )
+      let stdDev =
+        sqrt(data.map{ pow($0 - mean, 2) }.reduce(0, combine: { $0 + $1 }) / samples)
+      return (min, max, mean, stdDev)
+  }
 }
+
+
+
+// TODO: make these work later so stats funcs can be generic
+// Protocol with extensions to define a NumericType
+// Constrains data type to only declared numerical types
+protocol NumericType {}
+extension Float:  NumericType {}
+extension Double: NumericType {}
+extension Int:    NumericType {}
 
 
 

@@ -1,0 +1,519 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CA6BFA91D248A52005A1A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFA81D248A52005A1A81 /* AppDelegate.swift */; };
+		2CA6BFAB1D248A52005A1A81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFAA1D248A52005A1A81 /* ViewController.swift */; };
+		2CA6BFAD1D248A52005A1A81 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFAC1D248A52005A1A81 /* Document.swift */; };
+		2CA6BFB01D248A52005A1A81 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFAE1D248A52005A1A81 /* Document.xcdatamodeld */; };
+		2CA6BFB21D248A52005A1A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6BFB11D248A52005A1A81 /* Assets.xcassets */; };
+		2CA6BFB51D248A52005A1A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6BFB31D248A52005A1A81 /* Main.storyboard */; };
+		2CA6BFC01D248A53005A1A81 /* Sorterizer_macTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFBF1D248A53005A1A81 /* Sorterizer_macTests.swift */; };
+		2CA6BFCB1D248A53005A1A81 /* Sorterizer_macUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFCA1D248A53005A1A81 /* Sorterizer_macUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CA6BFBC1D248A53005A1A81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CA6BF9D1D248A52005A1A81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA6BFA41D248A52005A1A81;
+			remoteInfo = "Sorterizer-mac";
+		};
+		2CA6BFC71D248A53005A1A81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CA6BF9D1D248A52005A1A81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA6BFA41D248A52005A1A81;
+			remoteInfo = "Sorterizer-mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CA6BFA51D248A52005A1A81 /* Sorterizer-mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorterizer-mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6BFA81D248A52005A1A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CA6BFAA1D248A52005A1A81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA6BFAC1D248A52005A1A81 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		2CA6BFAF1D248A52005A1A81 /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+		2CA6BFB11D248A52005A1A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CA6BFB41D248A52005A1A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CA6BFB61D248A52005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA6BFBB1D248A53005A1A81 /* Sorterizer-macTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorterizer-macTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6BFBF1D248A53005A1A81 /* Sorterizer_macTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorterizer_macTests.swift; sourceTree = "<group>"; };
+		2CA6BFC11D248A53005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA6BFC61D248A53005A1A81 /* Sorterizer-macUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorterizer-macUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6BFCA1D248A53005A1A81 /* Sorterizer_macUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorterizer_macUITests.swift; sourceTree = "<group>"; };
+		2CA6BFCC1D248A53005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CA6BFA21D248A52005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFB81D248A53005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFC31D248A53005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CA6BF9C1D248A52005A1A81 = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFA71D248A52005A1A81 /* Sorterizer-mac */,
+				2CA6BFBE1D248A53005A1A81 /* Sorterizer-macTests */,
+				2CA6BFC91D248A53005A1A81 /* Sorterizer-macUITests */,
+				2CA6BFA61D248A52005A1A81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CA6BFA61D248A52005A1A81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFA51D248A52005A1A81 /* Sorterizer-mac.app */,
+				2CA6BFBB1D248A53005A1A81 /* Sorterizer-macTests.xctest */,
+				2CA6BFC61D248A53005A1A81 /* Sorterizer-macUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CA6BFA71D248A52005A1A81 /* Sorterizer-mac */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFA81D248A52005A1A81 /* AppDelegate.swift */,
+				2CA6BFAA1D248A52005A1A81 /* ViewController.swift */,
+				2CA6BFAC1D248A52005A1A81 /* Document.swift */,
+				2CA6BFB11D248A52005A1A81 /* Assets.xcassets */,
+				2CA6BFB31D248A52005A1A81 /* Main.storyboard */,
+				2CA6BFB61D248A52005A1A81 /* Info.plist */,
+				2CA6BFAE1D248A52005A1A81 /* Document.xcdatamodeld */,
+			);
+			path = "Sorterizer-mac";
+			sourceTree = "<group>";
+		};
+		2CA6BFBE1D248A53005A1A81 /* Sorterizer-macTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFBF1D248A53005A1A81 /* Sorterizer_macTests.swift */,
+				2CA6BFC11D248A53005A1A81 /* Info.plist */,
+			);
+			path = "Sorterizer-macTests";
+			sourceTree = "<group>";
+		};
+		2CA6BFC91D248A53005A1A81 /* Sorterizer-macUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFCA1D248A53005A1A81 /* Sorterizer_macUITests.swift */,
+				2CA6BFCC1D248A53005A1A81 /* Info.plist */,
+			);
+			path = "Sorterizer-macUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CA6BFA41D248A52005A1A81 /* Sorterizer-mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6BFCF1D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-mac" */;
+			buildPhases = (
+				2CA6BFA11D248A52005A1A81 /* Sources */,
+				2CA6BFA21D248A52005A1A81 /* Frameworks */,
+				2CA6BFA31D248A52005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sorterizer-mac";
+			productName = "Sorterizer-mac";
+			productReference = 2CA6BFA51D248A52005A1A81 /* Sorterizer-mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CA6BFBA1D248A53005A1A81 /* Sorterizer-macTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6BFD21D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-macTests" */;
+			buildPhases = (
+				2CA6BFB71D248A53005A1A81 /* Sources */,
+				2CA6BFB81D248A53005A1A81 /* Frameworks */,
+				2CA6BFB91D248A53005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA6BFBD1D248A53005A1A81 /* PBXTargetDependency */,
+			);
+			name = "Sorterizer-macTests";
+			productName = "Sorterizer-macTests";
+			productReference = 2CA6BFBB1D248A53005A1A81 /* Sorterizer-macTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CA6BFC51D248A53005A1A81 /* Sorterizer-macUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6BFD51D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-macUITests" */;
+			buildPhases = (
+				2CA6BFC21D248A53005A1A81 /* Sources */,
+				2CA6BFC31D248A53005A1A81 /* Frameworks */,
+				2CA6BFC41D248A53005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA6BFC81D248A53005A1A81 /* PBXTargetDependency */,
+			);
+			name = "Sorterizer-macUITests";
+			productName = "Sorterizer-macUITests";
+			productReference = 2CA6BFC61D248A53005A1A81 /* Sorterizer-macUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CA6BF9D1D248A52005A1A81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Marcus Grant";
+				TargetAttributes = {
+					2CA6BFA41D248A52005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2CA6BFBA1D248A53005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2CA6BFA41D248A52005A1A81;
+					};
+					2CA6BFC51D248A53005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2CA6BFA41D248A52005A1A81;
+					};
+				};
+			};
+			buildConfigurationList = 2CA6BFA01D248A52005A1A81 /* Build configuration list for PBXProject "Sorterizer-mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CA6BF9C1D248A52005A1A81;
+			productRefGroup = 2CA6BFA61D248A52005A1A81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CA6BFA41D248A52005A1A81 /* Sorterizer-mac */,
+				2CA6BFBA1D248A53005A1A81 /* Sorterizer-macTests */,
+				2CA6BFC51D248A53005A1A81 /* Sorterizer-macUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CA6BFA31D248A52005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFB21D248A52005A1A81 /* Assets.xcassets in Resources */,
+				2CA6BFB51D248A52005A1A81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFB91D248A53005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFC41D248A53005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CA6BFA11D248A52005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFB01D248A52005A1A81 /* Document.xcdatamodeld in Sources */,
+				2CA6BFAB1D248A52005A1A81 /* ViewController.swift in Sources */,
+				2CA6BFA91D248A52005A1A81 /* AppDelegate.swift in Sources */,
+				2CA6BFAD1D248A52005A1A81 /* Document.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFB71D248A53005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFC01D248A53005A1A81 /* Sorterizer_macTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFC21D248A53005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFCB1D248A53005A1A81 /* Sorterizer_macUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CA6BFBD1D248A53005A1A81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA6BFA41D248A52005A1A81 /* Sorterizer-mac */;
+			targetProxy = 2CA6BFBC1D248A53005A1A81 /* PBXContainerItemProxy */;
+		};
+		2CA6BFC81D248A53005A1A81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA6BFA41D248A52005A1A81 /* Sorterizer-mac */;
+			targetProxy = 2CA6BFC71D248A53005A1A81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CA6BFB31D248A52005A1A81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA6BFB41D248A52005A1A81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CA6BFCD1D248A53005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CA6BFCE1D248A53005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2CA6BFD01D248A53005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CA6BFD11D248A53005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CA6BFD31D248A53005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorterizer-mac.app/Contents/MacOS/Sorterizer-mac";
+			};
+			name = Debug;
+		};
+		2CA6BFD41D248A53005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-macTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-macTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorterizer-mac.app/Contents/MacOS/Sorterizer-mac";
+			};
+			name = Release;
+		};
+		2CA6BFD61D248A53005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sorterizer-mac";
+			};
+			name = Debug;
+		};
+		2CA6BFD71D248A53005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-macUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-macUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sorterizer-mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA6BFA01D248A52005A1A81 /* Build configuration list for PBXProject "Sorterizer-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6BFCD1D248A53005A1A81 /* Debug */,
+				2CA6BFCE1D248A53005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CA6BFCF1D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6BFD01D248A53005A1A81 /* Debug */,
+				2CA6BFD11D248A53005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA6BFD21D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-macTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6BFD31D248A53005A1A81 /* Debug */,
+				2CA6BFD41D248A53005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA6BFD51D248A53005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-macUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6BFD61D248A53005A1A81 /* Debug */,
+				2CA6BFD71D248A53005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CA6BFAE1D248A52005A1A81 /* Document.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CA6BFAF1D248A52005A1A81 /* Document.xcdatamodel */,
+			);
+			currentVersion = 2CA6BFAF1D248A52005A1A81 /* Document.xcdatamodel */;
+			path = Document.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2CA6BF9D1D248A52005A1A81 /* Project object */;
+}
