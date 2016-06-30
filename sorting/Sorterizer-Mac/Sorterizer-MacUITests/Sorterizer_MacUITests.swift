@@ -1,14 +1,14 @@
 //
-//  sort_testerUITests.swift
-//  sort-testerUITests
+//  Sorterizer_MacUITests.swift
+//  Sorterizer-MacUITests
 //
-//  Created by Marcus Grant on 6/24/16.
+//  Created by Marcus Grant on 6/29/16.
 //  Copyright © 2016 Marcus Grant. All rights reserved.
 //
 
 import XCTest
 
-class sort_testerUITests: XCTestCase {
+class Sorterizer_MacUITests: XCTestCase {
         
     override func setUp() {
         super.setUp()

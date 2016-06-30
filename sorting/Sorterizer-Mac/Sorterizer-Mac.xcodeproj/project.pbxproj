@@ -1,0 +1,523 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2CA6BFE51D24903A005A1A81 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFE41D24903A005A1A81 /* AppDelegate.swift */; };
+		2CA6BFE71D24903A005A1A81 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFE61D24903A005A1A81 /* ViewController.swift */; };
+		2CA6BFE91D24903A005A1A81 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFE81D24903A005A1A81 /* Document.swift */; };
+		2CA6BFEC1D24903A005A1A81 /* Document.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFEA1D24903A005A1A81 /* Document.xcdatamodeld */; };
+		2CA6BFEE1D24903A005A1A81 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6BFED1D24903A005A1A81 /* Assets.xcassets */; };
+		2CA6BFF11D24903A005A1A81 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2CA6BFEF1D24903A005A1A81 /* Main.storyboard */; };
+		2CA6BFFC1D24903A005A1A81 /* Sorterizer_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6BFFB1D24903A005A1A81 /* Sorterizer_MacTests.swift */; };
+		2CA6C0071D24903A005A1A81 /* Sorterizer_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6C0061D24903A005A1A81 /* Sorterizer_MacUITests.swift */; };
+		2CA6C0151D249503005A1A81 /* SortController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2CA6C0141D249503005A1A81 /* SortController.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		2CA6BFF81D24903A005A1A81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CA6BFD91D24903A005A1A81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA6BFE01D24903A005A1A81;
+			remoteInfo = "Sorterizer-Mac";
+		};
+		2CA6C0031D24903A005A1A81 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 2CA6BFD91D24903A005A1A81 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2CA6BFE01D24903A005A1A81;
+			remoteInfo = "Sorterizer-Mac";
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		2CA6BFE11D24903A005A1A81 /* Sorterizer-Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Sorterizer-Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6BFE41D24903A005A1A81 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		2CA6BFE61D24903A005A1A81 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2CA6BFE81D24903A005A1A81 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
+		2CA6BFEB1D24903A005A1A81 /* Document.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Document.xcdatamodel; sourceTree = "<group>"; };
+		2CA6BFED1D24903A005A1A81 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2CA6BFF01D24903A005A1A81 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		2CA6BFF21D24903A005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA6BFF71D24903A005A1A81 /* Sorterizer-MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorterizer-MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6BFFB1D24903A005A1A81 /* Sorterizer_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorterizer_MacTests.swift; sourceTree = "<group>"; };
+		2CA6BFFD1D24903A005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA6C0021D24903A005A1A81 /* Sorterizer-MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Sorterizer-MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2CA6C0061D24903A005A1A81 /* Sorterizer_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Sorterizer_MacUITests.swift; sourceTree = "<group>"; };
+		2CA6C0081D24903A005A1A81 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2CA6C0141D249503005A1A81 /* SortController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SortController.swift; path = ../../SortController.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		2CA6BFDE1D24903A005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFF41D24903A005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFFF1D24903A005A1A81 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2CA6BFD81D24903A005A1A81 = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFE31D24903A005A1A81 /* Sorterizer-Mac */,
+				2CA6BFFA1D24903A005A1A81 /* Sorterizer-MacTests */,
+				2CA6C0051D24903A005A1A81 /* Sorterizer-MacUITests */,
+				2CA6BFE21D24903A005A1A81 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		2CA6BFE21D24903A005A1A81 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFE11D24903A005A1A81 /* Sorterizer-Mac.app */,
+				2CA6BFF71D24903A005A1A81 /* Sorterizer-MacTests.xctest */,
+				2CA6C0021D24903A005A1A81 /* Sorterizer-MacUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		2CA6BFE31D24903A005A1A81 /* Sorterizer-Mac */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6C0141D249503005A1A81 /* SortController.swift */,
+				2CA6BFE41D24903A005A1A81 /* AppDelegate.swift */,
+				2CA6BFE61D24903A005A1A81 /* ViewController.swift */,
+				2CA6BFE81D24903A005A1A81 /* Document.swift */,
+				2CA6BFED1D24903A005A1A81 /* Assets.xcassets */,
+				2CA6BFEF1D24903A005A1A81 /* Main.storyboard */,
+				2CA6BFF21D24903A005A1A81 /* Info.plist */,
+				2CA6BFEA1D24903A005A1A81 /* Document.xcdatamodeld */,
+			);
+			path = "Sorterizer-Mac";
+			sourceTree = "<group>";
+		};
+		2CA6BFFA1D24903A005A1A81 /* Sorterizer-MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6BFFB1D24903A005A1A81 /* Sorterizer_MacTests.swift */,
+				2CA6BFFD1D24903A005A1A81 /* Info.plist */,
+			);
+			path = "Sorterizer-MacTests";
+			sourceTree = "<group>";
+		};
+		2CA6C0051D24903A005A1A81 /* Sorterizer-MacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				2CA6C0061D24903A005A1A81 /* Sorterizer_MacUITests.swift */,
+				2CA6C0081D24903A005A1A81 /* Info.plist */,
+			);
+			path = "Sorterizer-MacUITests";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		2CA6BFE01D24903A005A1A81 /* Sorterizer-Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6C00B1D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-Mac" */;
+			buildPhases = (
+				2CA6BFDD1D24903A005A1A81 /* Sources */,
+				2CA6BFDE1D24903A005A1A81 /* Frameworks */,
+				2CA6BFDF1D24903A005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Sorterizer-Mac";
+			productName = "Sorterizer-Mac";
+			productReference = 2CA6BFE11D24903A005A1A81 /* Sorterizer-Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		2CA6BFF61D24903A005A1A81 /* Sorterizer-MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6C00E1D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-MacTests" */;
+			buildPhases = (
+				2CA6BFF31D24903A005A1A81 /* Sources */,
+				2CA6BFF41D24903A005A1A81 /* Frameworks */,
+				2CA6BFF51D24903A005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA6BFF91D24903A005A1A81 /* PBXTargetDependency */,
+			);
+			name = "Sorterizer-MacTests";
+			productName = "Sorterizer-MacTests";
+			productReference = 2CA6BFF71D24903A005A1A81 /* Sorterizer-MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		2CA6C0011D24903A005A1A81 /* Sorterizer-MacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 2CA6C0111D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-MacUITests" */;
+			buildPhases = (
+				2CA6BFFE1D24903A005A1A81 /* Sources */,
+				2CA6BFFF1D24903A005A1A81 /* Frameworks */,
+				2CA6C0001D24903A005A1A81 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				2CA6C0041D24903A005A1A81 /* PBXTargetDependency */,
+			);
+			name = "Sorterizer-MacUITests";
+			productName = "Sorterizer-MacUITests";
+			productReference = 2CA6C0021D24903A005A1A81 /* Sorterizer-MacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		2CA6BFD91D24903A005A1A81 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "Marcus Grant";
+				TargetAttributes = {
+					2CA6BFE01D24903A005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+					2CA6BFF61D24903A005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2CA6BFE01D24903A005A1A81;
+					};
+					2CA6C0011D24903A005A1A81 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 2CA6BFE01D24903A005A1A81;
+					};
+				};
+			};
+			buildConfigurationList = 2CA6BFDC1D24903A005A1A81 /* Build configuration list for PBXProject "Sorterizer-Mac" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 2CA6BFD81D24903A005A1A81;
+			productRefGroup = 2CA6BFE21D24903A005A1A81 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				2CA6BFE01D24903A005A1A81 /* Sorterizer-Mac */,
+				2CA6BFF61D24903A005A1A81 /* Sorterizer-MacTests */,
+				2CA6C0011D24903A005A1A81 /* Sorterizer-MacUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		2CA6BFDF1D24903A005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFEE1D24903A005A1A81 /* Assets.xcassets in Resources */,
+				2CA6BFF11D24903A005A1A81 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFF51D24903A005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6C0001D24903A005A1A81 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2CA6BFDD1D24903A005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFEC1D24903A005A1A81 /* Document.xcdatamodeld in Sources */,
+				2CA6BFE71D24903A005A1A81 /* ViewController.swift in Sources */,
+				2CA6BFE51D24903A005A1A81 /* AppDelegate.swift in Sources */,
+				2CA6C0151D249503005A1A81 /* SortController.swift in Sources */,
+				2CA6BFE91D24903A005A1A81 /* Document.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFF31D24903A005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6BFFC1D24903A005A1A81 /* Sorterizer_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2CA6BFFE1D24903A005A1A81 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2CA6C0071D24903A005A1A81 /* Sorterizer_MacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		2CA6BFF91D24903A005A1A81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA6BFE01D24903A005A1A81 /* Sorterizer-Mac */;
+			targetProxy = 2CA6BFF81D24903A005A1A81 /* PBXContainerItemProxy */;
+		};
+		2CA6C0041D24903A005A1A81 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2CA6BFE01D24903A005A1A81 /* Sorterizer-Mac */;
+			targetProxy = 2CA6C0031D24903A005A1A81 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		2CA6BFEF1D24903A005A1A81 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				2CA6BFF01D24903A005A1A81 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		2CA6C0091D24903A005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		2CA6C00A1D24903A005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "-";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		2CA6C00C1D24903A005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		2CA6C00D1D24903A005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		2CA6C00F1D24903A005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorterizer-Mac.app/Contents/MacOS/Sorterizer-Mac";
+			};
+			name = Debug;
+		};
+		2CA6C0101D24903A005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Sorterizer-Mac.app/Contents/MacOS/Sorterizer-Mac";
+			};
+			name = Release;
+		};
+		2CA6C0121D24903A005A1A81 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-MacUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sorterizer-Mac";
+			};
+			name = Debug;
+		};
+		2CA6C0131D24903A005A1A81 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Sorterizer-MacUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "marcus.grant.Sorterizer-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = "Sorterizer-Mac";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2CA6BFDC1D24903A005A1A81 /* Build configuration list for PBXProject "Sorterizer-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6C0091D24903A005A1A81 /* Debug */,
+				2CA6C00A1D24903A005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2CA6C00B1D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6C00C1D24903A005A1A81 /* Debug */,
+				2CA6C00D1D24903A005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA6C00E1D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6C00F1D24903A005A1A81 /* Debug */,
+				2CA6C0101D24903A005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		2CA6C0111D24903A005A1A81 /* Build configuration list for PBXNativeTarget "Sorterizer-MacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				2CA6C0121D24903A005A1A81 /* Debug */,
+				2CA6C0131D24903A005A1A81 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		2CA6BFEA1D24903A005A1A81 /* Document.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				2CA6BFEB1D24903A005A1A81 /* Document.xcdatamodel */,
+			);
+			currentVersion = 2CA6BFEB1D24903A005A1A81 /* Document.xcdatamodel */;
+			path = Document.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 2CA6BFD91D24903A005A1A81 /* Project object */;
+}
